@@ -7,9 +7,9 @@ public class Actividad3 {
         Scanner scanner = new Scanner(System.in);
 
         //Solicitar la palabra o frase
-        System.out.print("Ingrese la palabra verificar ");
-        String palabra = scanner.nextLine().toLowerCase().replace(" ","");
-        System.out.print(palabra + "\n");
+        System.out.print("Ingrese la palabra verificar: ");
+        String palabra = scanner.nextLine().toLowerCase().replaceAll("[^a-záéíóúüñ]","");
+        //System.out.print(palabra + "\n");
 
         String palabraInvertida = "";
         for (int i= palabra.length() - 1; i >= 0; i--){
@@ -17,7 +17,7 @@ public class Actividad3 {
             palabraInvertida += caracter;
         }
 
-        System.out.print("Palabra Invertida "+ palabraInvertida +"\n");
+        System.out.print("Palabra Invertida: "+ palabraInvertida +"\n");
 
         if(palabra.equals(palabraInvertida)){
             System.out.print("La palabra " +  palabra +" Es palindroma");
