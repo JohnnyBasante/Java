@@ -8,7 +8,7 @@ public class Actividad3 {
 
         //Solicitar la palabra o frase
         System.out.print("Ingrese la palabra verificar: ");
-        String palabra = scanner.nextLine().toLowerCase().replaceAll("[^a-záéíóúüñ]","");
+        String palabra = scanner.nextLine().toLowerCase().replaceAll("[ ,.!?]+","");
         //System.out.print(palabra + "\n");
 
         String palabraInvertida = "";
